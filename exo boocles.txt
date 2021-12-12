@@ -1,0 +1,257 @@
+/*1) Exercice 1
+    Ecrire un algorithme qui demande à l’utilisateur un nombre compris entre 1 et 3 jusqu’à ce que la réponse 
+    convienne.
+   
+    var nb en float( nombre à virgule)
+    Debut
+    nb<-0 (instancier la variable)
+    Ecrire "Choisir un nombre entre 1 et 3"
+    Tan que nb<1 ou nb >3
+
+    Lire nb
+    Si nb<1 ou nb>3 Alors 
+    Ecrire "Recommencer votre saisie"
+      FinSi
+Fin Tant que
+Fin
+
+2) Exercice 2
+Ecrire un algorithme qui demande un nombre compris entre 10 et 20, jusqu’à ce que la réponse convienne. 
+En cas de réponse supérieure à 20, on fera apparaître un message : « Plus petit ! », et inversement, « Plus 
+grand ! » si le nombre est inférieur à 10.
+
+variable nb en entier
+
+Début 
+Demander un nombre
+Mettre le nombre en memoire
+Tant qu'il me donne pas un chiffre entre 10 et 20 , il recommence
+si le chiffre est < à 10 on affiche "plus grand"
+si le chiffre est supérieur à20 on affichera "plus petit"
+fin
+----------------------------
+Variable nb en entier
+Debut
+Ecrire "Donnez un nombre"
+Lire nb
+
+Tant que nb < 10 ou nb >20
+Lire nb
+Si nb<10 Alors
+Ecrire " plus grand"
+Sinon si nb>20 
+Ecrire "Plus petit"
+Fin Tant que
+Fin
+
+
+3) Exercice 3
+Ecrire un algorithme qui demande un nombre de départ, et qui ensuite affiche les dix nombres suivants. Par 
+exemple, si l'utilisateur entre le nombre 17, le programme affichera les nombres de 18 à 27.
+
+Début
+Demander un nombre
+Mettre le nombre en memoire
+afficher les 10 nombres qui suivent
+Fin
+---------------------------------------------------------
+
+Variable nombre en entier 
+final<- nombre+10
+Début
+Ecrire "Donnez un nombre de départ"
+Ecrir "Voici les 10 nombres suivants "
+Lire nombre
+Tant que nombre <- final
+ 
+  ecrire nombre+1
+  nombre <- nombre+1
+Fin Tant que
+Fin
+
+----
+variable  nb, i en entier 
+i<-0
+Début
+Ecrire "Donnez un nombre de départ"
+Ecrir "Voici les 10 nombres suivants "
+Tant que i < 10
+Alors i<- i+1
+Ecrire nb+1
+Fin tant que
+Fin
+
+
+
+
+4) Exercice 4
+Ecrire un algorithme qui demande un nombre de départ, et qui ensuite écrit la table de multiplication de ce 
+nombre, présentée comme suit (cas où l'utilisateur entre le nombre 7) :
+Table de 7 :
+7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 21
+…
+7 x 10 = 70
+
+
+variable nb, i en entier
+Début
+Ecrire "Donnez moi un nombre"
+Lire nb
+Pour i<-1 à 10
+Ecrire nb "x" i "=" nb*i
+i suivant (i++)
+Fin
+
+------------------JS----------
+let nb = 7;
+console.log (" la table de" +nb+ "=")
+for ( i=1, i <= 10; i++){
+    console.log ( nb + "*" + i + "=" +nb*i)
+}
+
+
+5) Exercice 5
+Ecrire un algorithme qui demande un nombre de départ, et qui calcule la somme des entiers jusqu’à ce 
+nombre. Par exemple, si l’on entre 5, le programme doit calculer :
+1 + 2 + 3 + 4 + 5 = 15
+NB : on souhaite afficher uniquement le résultat, pas la décomposition du calcul 
+
+variable nombre, i, compt  en entier
+Début
+Ecrire "Donnez un nombre"
+Lire  nombre 
+For i<-1 à nb
+compt = compte + i
+Ecrire compte
+I suivant (i++)
+Fin
+------------JS---------------
+let nb = 5;
+let total = 0;
+for (i=o ; i<=nb; i++ ){
+    total+=i;
+} 
+console.log(total)
+
+6) Exercice 6
+Ecrire un algorithme qui demande un nombre de départ, et qui calcule sa factorielle.
+NB : la factorielle de 8, notée 8 !, vaut
+1 x 2 x 3 x 4 x 5 x 6 x 7 x 8
+
+Vleur nb, i, factoriel en entier 
+Debut
+écrire "Donnez un nombre"
+Lire nb
+For i<=1 à nb;
+factoriel = factoriel*i;
+Ecrire nb + "" + "!" + "," + "vaut" + factoriel
+i suivant (i++)
+fin
+---------------JS-----------------
+let nd = 8;
+let factoriel = 1;
+for (i=1 ; i<=nb; i++){
+    factoriel * =i;
+}
+console.log( nb + "" + "!" + "," + "vaut" + factoriel )
+
+7) Exercice 7
+Ecrire un algorithme qui demande successivement 20 nombres à l’utilisateur, et qui lui dise ensuite quel 
+était le plus grand parmi ces 20 nombres :
+Entrez le nombre numéro 1 : 12
+Entrez le nombre numéro 2 : 14
+etc.
+Entrez le nombre numéro 20 : 6
+Le plus grand de ces nombres est : 14
+Modifiez ensuite l’algorithme pour que le programme affiche de surcroît en quelle position avait été saisie 
+ce nombre :
+C’était le nombre numéro 2
+
+variable nb, i, pg  en entier
+Début
+pg=0
+pour (i=1; i<=20; i++){
+    Ecrere Donnez moi un nombre
+    Lire nb
+    Si i=1 ou nb>pg alors
+     pg<=nb
+     Finsi
+    Ecrire "le nombre plus grand" + pg
+}
+
+suite: on ajoute 
+var position
+apres pg<-i : position <-i
+ecrire "à la position" position
+
+8) Exercice 8
+Réécrire l’algorithme précédent, mais cette fois-ci on ne connaît pas d’avance combien l’utilisateur 
+souhaite saisir de nombres. La saisie des nombres s’arrête lorsque l’utilisateur entre un zéro.
+
+Variable nb1,i1, pos, pg en entier //i2=position ; nb2=pg=plus grand
+i1<-0
+pg<-1
+Début
+Tant que nb1<>0 alors
+Ecrire "entrer le nombre"
+Lire le nb1
+i<-i+1
+Si i=1 ou nb1 > pg alorss
+pg<-nb1
+pos<-i1
+finsi
+Ecrire "Le nombre le plus grand est": pg
+Fin Tant que
+fin
+
+s
+9) Exercice 9
+Lire la suite des prix (en euros entiers et terminée par zéro) des achats d’un client. Calculer la somme qu’il 
+doit, lire la somme qu’il paye, et simuler la remise de la monnaie en affichant les textes "10 Euros", "5 
+Euros" et "1 Euro" autant de fois qu’il y a de coupures de chaque sorte à rendre
+
+variable prixProduit ,sommeTotale , argentClient, somme Rendu; nb10, nb5, nb1 en entier
+-La caissier scanne des produits tant qu'il y en
+-Il calcule la somme des produits( ex:110 euros)
+-Le caissier calcule la somme à rendre (ex: 8 euros)
+-Il utilise les billets de 10,5 et pieces 1
+-Dans cet ex. il doit rendre 8 euros donc 0 billets de 10, 1 billet de 5 et 3 pieces de 1
+
+Début
+prixProduit <- 1
+sommeTotale <- 0
+
+Tant Que prixProduit <> 0 Alors
+Ecrire "Donnez le montant"
+Lire prixProduit
+
+sommeTotale <- sommeTotal + prixProduit  ou sommeTotal+=prixTotal
+
+Fin Tant Que
+
+Ecrire "Vous devez la some de:" sommeTotal "euros"
+Ecrire "Le client donne"
+Lire argentClient
+
+sommeRendu <- argentClient - sommeTotal
+nb10 <- 0
+Tant Que sommeRendu >= 10 Alors
+nb10 <- nb10+1
+sommeRendu <- sommeRendu - 10
+Fin Tant Que
+
+nb5 <- 0
+Si sommeRendu >= 5 Alors
+nb5 += 1
+sommeRendu -=5 
+FinSi
+
+Ecrire "voici votre monnaie"
+Ecrire " jz vou doi " nb10 "billets de 10" nb5 "billets de 5" sommeRondu "pieces de 1 euros"
+Fin
+
+--------JS---------
+
+
