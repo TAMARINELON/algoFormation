@@ -1,0 +1,70 @@
+EXO11
+ Tableau chiffre [6] en Entier     j=1;
+ Variable i en Entier              while (j < 6) {
+ Début                               console.log (j);
+ pour i<-0 à 6                       j++;
+ chiffres[i] <- 0  
+ Ecrire chiffres[i]                }
+ i++
+ Fin
+
+EXO12
+ Tableau alphabet [5] en strings    var alphabet=["a", "e", "i" ,"o" ,"u" ,"y" ];
+ Début                              Console.log (alphabet)
+ alphabet[0] <- "a"
+ alphabet[1] <- "e"
+ alphabet[2] <- "i"
+ alphabet[3] <- "o"
+ alphabet[4] <- "u"
+ alphabet[5] <- "y"
+ 
+EXO13
+Tableau notes[8] en Entier
+Valeure i en Entier
+Début
+Pour i <- 0 à 8
+Ecrire "Donnez une note"
+Lire notes[i]
+i++
+Fin
+
+EXO14
+0 1 2 3 4  5 
+0 1 4 9 16 25  ou Nb[0,1,4,9,16,25] factorisation
+Tableau Nb(5) en ENTIER
+Variable i en Entier
+Début
+   pour i <- 0 à 5 
+   Nb(i) <- i*i
+   Ecrire Nb(i)
+   i suivant
+Fin
+
+EXO15
+N[1,3,5,7,11,13]
+Tableu N(6) en Entier
+Variable i,k en Entier
+Début
+N[0] <- 1
+Ecrire N[0]
+pour k <- 1 à 6
+N[k] <- N[k-1] + 2
+EcrireN[k]
+k++
+Fin
+
+EXO16
+N[1,1,2,3,5,8,13]
+
+EXO17
+Tableu notes[8] en Entier
+Variable i en Entier
+Début
+ somme <- 0
+ pour i <0 à 8;
+ Ecrire "Donnez une note";
+ Lire note[i]
+++
+somme <- somme+note[i];
+Ecrire "Votre moyenne est:" somme/9
+Fin
